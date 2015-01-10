@@ -203,8 +203,7 @@
                 "bower-asset-ignore": [
                     ".travis.yml",
                     "Gemfile",
-                    "Gemfile.lock",
-                    "vendor/",
+                    "Gemfile.lock",                    
                     "script/",
                     "test/"
                 ]
