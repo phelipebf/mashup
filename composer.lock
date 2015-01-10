@@ -43,7 +43,10 @@
                     "docs",
                     "js/tests",
                     "test-infra"
-                ]
+                ],
+                "asset-installer-paths": {                    
+                    "bower-asset-library": "vendor/bower"
+                }
             },
             "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
             "keywords": [
