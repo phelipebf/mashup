@@ -103,4 +103,9 @@ class SiteController extends Controller
     {
         return $this->render('faq');
     }
+    
+    public function actionComoFunciona()
+    {
+        return $this->render('como-funciona');
+    }
 }

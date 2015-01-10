@@ -44,8 +44,8 @@
                     "js/tests",
                     "test-infra"
                 ],
-                "asset-installer-path": {                    
-                    "bower-asset-library": "vendor/bower"
+                "installer-paths": {                    
+                    "bower-asset-library": ["vendor/bower"]
                 }
             },
             "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
@@ -92,7 +92,10 @@
                     "AUTHORS.txt",
                     "Gruntfile.js",
                     "package.json"
-                ]
+                ],
+                "installer-paths": {                    
+                    "bower-asset-library": ["vendor/bower"]
+                }
             },
             "license": [
                 "MIT"

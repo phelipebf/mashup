@@ -48,6 +48,7 @@ $config = [
                 'faq' => 'site/faq',
                 'contato' => 'site/contato',
                 'login' => 'site/login',
+                'como-funciona' => 'site/como-funciona',
             ],
         ]
     ],
