@@ -44,7 +44,7 @@
                     "js/tests",
                     "test-infra"
                 ],
-                "asset-installer-paths": {                    
+                "asset-installer-path": {                    
                     "bower-asset-library": "vendor/bower"
                 }
             },
