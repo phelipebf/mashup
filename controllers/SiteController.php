@@ -44,6 +44,10 @@ class SiteController extends Controller
                 'class' => 'yii\captcha\CaptchaAction',
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
             ],
+            'auth' => [
+                'class' => 'yii\authclient\AuthAction',
+                'successCallback' => [$this, 'successCallback'],
+            ],
         ];
     }
 
@@ -68,6 +72,22 @@ class SiteController extends Controller
         }
     }
 
+    public function actionLoginFacebook()
+    {
+        if (!\Yii::$app->user->isGuest) {
+            return $this->goHome();
+        }
+
+        $model = new LoginForm();
+        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            return $this->goBack();
+        } else {
+            return $this->render('login', [
+                'model' => $model,
+            ]);
+        }
+    }
+    
     public function actionLogout()
     {
         Yii::$app->user->logout();
@@ -107,5 +127,13 @@ class SiteController extends Controller
     public function actionComoFunciona()
     {
         return $this->render('como-funciona');
+    }
+    
+    public function successCallback($client)
+    {
+        $attributes = $client->getUserAttributes();
+        
+        var_dump($attributes); die;
+        // user login or signup comes here
     }
 }

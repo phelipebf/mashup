@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "865ce4d9e6c2c445e707b268f070dd3f",
+    "hash": "031ed5609dddf5346988330681af321d",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -43,10 +43,7 @@
                     "docs",
                     "js/tests",
                     "test-infra"
-                ],
-                "installer-paths": {                    
-                    "bower-asset-library": ["vendor/bower"]
-                }
+                ]
             },
             "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
             "keywords": [
@@ -92,10 +89,7 @@
                     "AUTHORS.txt",
                     "Gruntfile.js",
                     "package.json"
-                ],
-                "installer-paths": {                    
-                    "bower-asset-library": ["vendor/bower"]
-                }
+                ]
             },
             "license": [
                 "MIT"
@@ -108,16 +102,16 @@
         },
         {
             "name": "bower-asset/jquery.inputmask",
-            "version": "3.1.53",
+            "version": "3.1.55",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RobinHerbots/jquery.inputmask.git",
-                "reference": "1a863a0c9b733444f6766e5500eaf79b7b1d1d03"
+                "reference": "d90a0d180495635e8dd97a770e7ab8b3c4ee6d53"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RobinHerbots/jquery.inputmask/zipball/1a863a0c9b733444f6766e5500eaf79b7b1d1d03",
-                "reference": "1a863a0c9b733444f6766e5500eaf79b7b1d1d03",
+                "url": "https://api.github.com/repos/RobinHerbots/jquery.inputmask/zipball/d90a0d180495635e8dd97a770e7ab8b3c4ee6d53",
+                "reference": "d90a0d180495635e8dd97a770e7ab8b3c4ee6d53",
                 "shasum": ""
             },
             "require": {
@@ -460,6 +454,54 @@
                 "yii2"
             ],
             "time": "2014-12-07 16:42:41"
+        },
+        {
+            "name": "yiisoft/yii2-authclient",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-authclient.git",
+                "reference": "addb02e86f68751071ff296850c2cdf542cd1750"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-authclient/zipball/addb02e86f68751071ff296850c2cdf542cd1750",
+                "reference": "addb02e86f68751071ff296850c2cdf542cd1750",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "yii\\authclient\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Paul Klimov",
+                    "email": "klimov.paul@gmail.com"
+                }
+            ],
+            "description": "External authentication via OAuth and OpenID for the Yii framework",
+            "keywords": [
+                "OpenId",
+                "auth",
+                "oauth",
+                "yii2"
+            ],
+            "time": "2015-01-11 03:57:55"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
