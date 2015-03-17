@@ -36,7 +36,7 @@ $this->title = 'Login';
             
             <div class="col-md-4">
                 <div class="separator">
-                    <span class="ortext">ou</span>              
+                    <span class="ortext">ou</span>
                 </div>
             </div>
                 

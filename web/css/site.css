@@ -89,3 +89,23 @@ a.desc:after {
     padding: 10px 20px;
     margin: 0 0 15px 0;
 }
+
+.separator {
+    display: block;
+    margin: 32px auto 5px;
+    border-top: 1px solid #e9e9ec;
+    text-align: center;
+    border-right: none;
+    padding: 0;
+}
+
+.ortext {
+    position: relative;
+    bottom: 11px;
+    z-index: 2;
+    margin-top: 0px;
+    margin-right: 11px;
+    margin-left: 11px;
+    padding: 0px 8px;
+    background-color: white;
+}

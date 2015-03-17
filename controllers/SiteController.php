@@ -8,6 +8,8 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\Usuario;
+use app\models\User;
 
 class SiteController extends Controller
 {
@@ -46,7 +48,7 @@ class SiteController extends Controller
             ],
             'auth' => [
                 'class' => 'yii\authclient\AuthAction',
-                'successCallback' => [$this, 'successCallback'],
+                'successCallback' => [$this, 'successAuthCallback'],
             ],
         ];
     }
@@ -63,13 +65,17 @@ class SiteController extends Controller
         }
 
         $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
-        } else {
-            return $this->render('login', [
-                'model' => $model,
-            ]);
-        }
+//        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+//            return $this->goBack();
+//        } else {
+//            return $this->render('login', [
+//                'model' => $model,
+//            ]);
+//        }
+        
+        return $this->render('login', [
+            'model' => $model,
+        ]);
     }
 
     public function actionLoginFacebook()
@@ -129,11 +135,31 @@ class SiteController extends Controller
         return $this->render('como-funciona');
     }
     
-    public function successCallback($client)
+    public function actionSignUp()
     {
+        return $this->render('sign-up');
+    }
+    
+    public function successAuthCallback($client)
+    {   
+        $login = new LoginForm;        
+        $usuario = new Usuario;
+                
         $attributes = $client->getUserAttributes();
         
-        var_dump($attributes); die;
+        $user = $usuario->findOne([
+            "id_facebook" => $attributes['id'],
+        ]);
+                                
+        if( ! isset( $user->id_facebook ) )
+        {            
+            $usuario->createUser( $attributes );
+        }
+        
+        #User::setUser($attributes['id']);
+        $login->username = $user->ds_email;        
+        $login->login();
+        
         // user login or signup comes here
     }
 }
